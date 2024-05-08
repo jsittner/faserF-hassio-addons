@@ -14,6 +14,7 @@ services:
   - mysql:need
 startup: application
 boot: auto
+webui: "[PROTO:ssl]://[HOST]:[PORT:3443]"
 map:
   - ssl
 ingress: true
