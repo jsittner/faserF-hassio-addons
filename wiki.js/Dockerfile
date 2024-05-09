@@ -12,6 +12,7 @@ RUN \
     nodejs \
     wget \
     tar \
+    nginx \
     mariadb-client
 
 # ABOVE is everything for the old NoteJS Version
@@ -20,12 +21,16 @@ WORKDIR /wiki
 ARG WIKIJS_VERSION="v2.5.302"
 RUN wget https://github.com/Requarks/wiki/releases/download/${WIKIJS_VERSION}/wiki-js.tar.gz
 
+RUN mkdir -p /run/nginx
 RUN tar xzf wiki-js.tar.gz -C /wiki
 RUN rm wiki-js.tar.gz
 RUN rm /wiki/config.sample.yml
 
+# Copy ingress to nginx
+COPY ingress.conf /etc/nginx.http.d/
 # Copy data for add-on
 COPY run.sh /
 #COPY config.yml /wiki/
 RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
+CMD [ "nginx","-g","daemon off;error_log /dev/stdout debug;" ]
