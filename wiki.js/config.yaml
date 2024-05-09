@@ -18,7 +18,6 @@ map:
   - ssl
 ingress: true
 ingress_port: 3000
-ssl: false
 init: false
 panel_icon: mdi:wikipedia
 options:
