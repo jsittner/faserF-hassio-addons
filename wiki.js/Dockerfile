@@ -12,7 +12,7 @@ RUN \
     nodejs \
     wget \
     tar \
-    #nginx \
+    nginx \
     mariadb-client
 
 # ABOVE is everything for the old NoteJS Version
