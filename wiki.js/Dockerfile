@@ -12,7 +12,7 @@ RUN \
     nodejs \
     wget \
     tar \
-    nginx \
+    #nginx \
     mariadb-client
 
 # ABOVE is everything for the old NoteJS Version
@@ -33,4 +33,4 @@ COPY run.sh /
 #COPY config.yml /wiki/
 RUN chmod a+x /run.sh
 CMD [ "/run.sh" ]
-CMD [ "nginx","-g","daemon off;error_log /dev/stdout debug;" ]
+#CMD [ "nginx","-g","daemon off;error_log /dev/stdout debug;" ]
