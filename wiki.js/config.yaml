@@ -31,9 +31,3 @@ schema:
   keyfile: str
   log_level: list(error|warn|info|debug)?
   reset_database: bool?
-ports:
-  3000/tcp: 3000
-  3443/tcp: 3443
-ports_description:
-  3000/tcp: HTTP Entrance port
-  3443/tcp: HTTPS/SSL Entrance port
