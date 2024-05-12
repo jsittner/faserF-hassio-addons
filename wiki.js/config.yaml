@@ -17,7 +17,7 @@ startup: application
 #map:
 #  - ssl
 ingress: true
-#ingress_port: 3000
+ingress_port: 3000
 init: false
 panel_icon: mdi:wikipedia
 #options:
