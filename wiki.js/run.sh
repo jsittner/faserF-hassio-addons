@@ -75,3 +75,4 @@ echo "CREATE DATABASE IF NOT EXISTS wiki;" |
 
 echo "Starting Wiki.JS"
 node server
+nginx
