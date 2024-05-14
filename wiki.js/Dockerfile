@@ -18,7 +18,7 @@ RUN \
     && mkdir -p /run/nginx
 
 WORKDIR /wiki
-ARG WIKIJS_VERSION="v2.5.302"
+ARG WIKIJS_VERSION="v2.5.301"
 RUN wget https://github.com/Requarks/wiki/releases/download/${WIKIJS_VERSION}/wiki-js.tar.gz
 
 RUN mkdir -p /run/nginx
