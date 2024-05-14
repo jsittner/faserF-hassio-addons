@@ -27,7 +27,7 @@ RUN rm wiki-js.tar.gz
 RUN rm /wiki/config.sample.yml
 
 # Copy ingress to nginx
-COPY ingress.conf /etc/nginx.http.d/
+COPY ingress.conf /etc/nginx/http.d/
 # Copy data for add-on
 COPY run.sh /
 #COPY config.yml /wiki/
