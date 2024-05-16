@@ -21,7 +21,7 @@ RUN \
     libressl-dev \
     pcre-dev \
     wget \
-    zlib-dev \
+    zlib-dev 
 RUN \
     mkdir -p /run/nginx \
     && cd /tmp \
