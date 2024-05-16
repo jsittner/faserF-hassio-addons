@@ -17,7 +17,7 @@ RUN \
     nginx --with-http_sub_module \
     mariadb-client \
     \
-    && mkdir -p /run/nginx
+    && mkdir -p /run/nginx \
     build-base \
     linux-headers \
     libressl-dev \
