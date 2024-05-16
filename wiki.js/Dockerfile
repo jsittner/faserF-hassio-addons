@@ -10,20 +10,19 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 # Setup base
 # hadolint ignore=DL3003
 RUN \
-    apk add --no-cache \
+    apk add --no-cache --virtual .build-deps \
     nodejs \
     wget \
     tar \
     #nginx \
     mariadb-client \
-    \
-    && mkdir -p /run/nginx \
     build-base \
     linux-headers \
     libressl-dev \
     pcre-dev \
     wget \
     zlib-dev \
+    && mkdir -p /run/nginx \
     && cd /tmp \
     && wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
     && tar xzf nginx-${NGINX_VERSION}.tar.gz \
