@@ -22,8 +22,8 @@ RUN \
     pcre-dev \
     wget \
     zlib-dev \
-    \
-    && mkdir -p /run/nginx \
+RUN \
+    mkdir -p /run/nginx \
     && cd /tmp \
     && wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
     && tar xzf nginx-${NGINX_VERSION}.tar.gz \
