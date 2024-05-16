@@ -12,7 +12,7 @@ RUN \
     nodejs \
     wget \
     tar \
-    nginx \
+    nginx --with-http_sub_module \
     mariadb-client \
     \
     && mkdir -p /run/nginx
