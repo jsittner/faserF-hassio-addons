@@ -74,5 +74,4 @@ echo "CREATE DATABASE IF NOT EXISTS wiki;" |
 	mysql -h "${host}" -P "${port}" -u "${username}" -p"${password}"
 
 echo "Starting Wiki.JS"
-node server
-nginx
+node server && nginx
